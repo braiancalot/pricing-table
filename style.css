@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --yellow: #ffcc29;
+    --blue: #1d539e;
+    --gray: #828799;
+    --page-background: #f9fbfc;
+    --font-color: #1E2338;
+}
+
+body {
+    width: 100vw;
+    min-width: 500px;
+    height: 100vh;
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--page-background);
+}
+
+header {
+    background-color: var(--blue);
+    height: 50%;
+    min-width: 500px;
+    border: 1px solid var(--blue);
+}
+
+.header-text {
+    text-align: center;
+    margin-top: 100px;
+}
+
+h1 {
+    color: var(--page-background);
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+p {
+    color: var(--page-background);
+    font-size: 1.125;
+    font-weight: 400;
+    width: 500px;
+    margin: 0 auto;
+}
+
+main {
+    background-color: var(--page-background);
+    height: 50%;
+}
+
+.plans-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    /* width: 60%; */
+    margin: 0 auto;
+    flex-wrap: wrap;
+    transform: translateY(-150px);
+}
+
+.plan {
+    height: 450px;
+    width: 350px;
+    border-radius: 8px;
+    background-color: var(--page-background);
+    box-shadow: 0 1px 2px #8e96b949;
+    display: flex;
+    flex-direction: column;
+}
+
+.plan:hover {
+    transform: scale(1.05);
+}
+
+.plan:hover .item {
+    font-size: 1rem;
+}
+
+.plan-header {
+    padding: 20px 30px;
+}
+
+.popular {
+    background-color: var(--yellow);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 1px 2px #8e96b949;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.popular-sticker {
+    background-color: var(--blue);
+    color: var(--page-background);
+    font-size: 0.75rem;
+    border-radius: 40px;
+    padding: 8px 25px;
+}
+
+.plan-name {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--font-color);
+}
+
+.blue {
+    color: var(--blue);
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 0px 30px;
+}
+
+.price {
+    margin: 10px 0;
+}
+
+.main-price {
+    font-size: 2.25rem;
+    color: var(--font-color);
+    font-weight: 700;
+    margin-right: -5px;
+
+}
+
+.secundary-price {
+    font-size: 1.125rem;
+    color: var(--font-color);
+    font-weight: 700;
+}
+
+.month {
+    font-size: 1.125rem;
+    color: var(--gray);
+}
+
+.description {
+    font-size: 0.875rem;
+    color: var(--gray);
+}
+
+.bar {
+   height: 1px;
+   border-top: 1px solid #EEEEEE;
+   margin: 15px 0 15px;
+}
+
+.itens {
+    height: 40%;
+    margin-bottom: 20px;
+    line-height: 2.5;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+}
+
+.check{
+    margin-right: 10px;
+}
+
+.item-description {
+    color: var(--gray);
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.btn-sign {
+    padding: 10px 0;
+    background-color: var(--page-background);
+    border: 1px solid var(--blue);
+    border-radius: 8px;
+}
+
+.btn-sign:hover {
+    background-color: var(--blue);
+}
+
+.btn-sign:hover .sign-text {
+    color: var(--page-background);
+}
+
+.btn-sign:active {
+    background-color: var(--page-background);
+}
+
+.btn-sign:active .sign-text {
+    color: var(--blue);
+}
+
+.sign-text {
+    color: var(--blue);
+    font-size: 1.125rem;
+    font-weight: 500;
+}
+
+@media screen and (max-width: 720px){
+    .basic {
+        order: -1;
+    }
+}
+
+@media screen and (max-width: 556px){
+    .plans-container {
+        transform: translateY(20px);
+    }
+
+    .plan:hover {
+        transform: none;
+    }
+    
+    .plan:hover .item {
+        font-size: 0.875rem;
+    }
+
+    .btn-sign:hover {
+        background-color: var(--page-background);
+    }
+    
+    .btn-sign:hover .sign-text {
+        color: var(--blue);
+    }
+
+    .btn-sign:active {
+        background-color: var(--blue);
+    }
+    
+    .btn-sign:active .sign-text {
+        color: var(--page-background);
+    }
+}
